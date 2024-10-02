@@ -2,157 +2,111 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> who am i </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한규한의 이력서</title>
     <style>
-        body{
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        a:hover{
-            background-color: aliceblue;
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
         }
-        #project{
-            border: 2px solid antiquewhite;
-            flex-direction: row;
-            display: flex;
-            flex-wrap: wrap;
-            
+        hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 20px 0;
         }
-
-        /* 프로젝트 스타일 */
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
         #photo {
-            width:130px;
+            display: block;
+            margin: 20px auto;
+            width: 150px;
             height: 150px;
+            border-radius: 50%;
             object-fit: cover;
-            object-position: 80% 30% ;
-            border-radius:90%;
         }
-
-        video {
-          width: 20vh;
-          height: 10vw;
-          min-height: 150px;
-          object-fit: cover;
-          object-position: 70% 20% ;
-          visibility: visible;
+        #contact, #about, #education, #skills, #experience, #projects, #awards {
+            margin-bottom: 30px;
         }
-        .containerbox{
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-            border: 2px solid snow ;
-            width: max-content;
-            align-items: center;
+        a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        .p1_lstm{
+        a:hover {
+            text-decoration: underline;
         }
-        .p2_pmforecast {
-            width: 20vh;
-            height: 10vw;
-        }
-
     </style>
 </head>
 <body>
-    <header id="header">
-        <!-- 이력서 헤더 : 이름과 타이틀 작성 -->
-        <h1>한규한 | 호기심 많은 프로그래머  </h1>
+    <header>
+        <h1>한규한 | 호기심 많은 프로그래머</h1>
         <hr>
-        백엔드 개발자 지망생
-        <hr>
-      </header>
-      <main>
-        
-        <img src="./static/m2.jpg" id="photo" />
+    </header>
 
-        <article id="mainLeft">
-            <h2>SKILLS</h2>
-            <!-- 내가 잘할 수 있는 분야 -->
-            Spring, Java, Jpa, Jsp, Thymeleaf, Mysql
-          <section>
-            <h2>PROJECT</h2>
-                <!-- 프로젝트 jpg, gif 링크 걸기 -->
-            <div id ="project">
-                <a href="https://github.com/gksrbgks2021/minigame/tree/main">
-                    <div class="containerbox">
-                        <p>자바 미니게임 구현</p>
-                        <video class="p2_pmforecast" src="./static/minigame.mp4" autoplay loop muted/>
-                    </div>
-                </a>
-                
-                <a href="https://github.com/gksrbgks2021/webPOS">
-                    <div class="containerbox">
-                        <p>편의점POS WEB APP</p>
-                            <video class="p2_pmforecast" src="./static/cpos.mp4" autoplay loop muted/>
-                    </div>
-                </a>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📱 010-2021-3370</p>
+        <p><a href="mailto:gksrbgks123@gmail.com">gksrbgks123@gmail.com</a></p>
+    </section>
 
-                <a href="https://sleet-brisket-9e2.notion.site/b0cfba0a3dc349038398427af9307e5f?pvs=4">
-                    <div class="containerbox">
-                        <p>레거시 코드 배포</p>
-                        <img class="p2_pmforecast" src="./static/nginxproject.png"/>
-                    </div>
-                </a>
+    <section id="about">
+        <h2>About</h2>
+        <p>안녕하세요, 생각한 아이디어를 코드로 구현하는 것이 재미있어서 개발자의 길을 걷고 있는 한규한입니다. 현재 배포를 목표로 웹 오목 프로젝트를 진행 중입니다.</p>
+    </section>
 
-                <a href="https://github.com/gksrbgks2021/phtoshop_code/blob/master/Readme.md">
-                    <div class="containerbox">
-                        <p>포토샵 기능 구현</p>
-                        <video class="p2_pmforecast" src="./static/opencv.mp4" autoplay loop muted/>
-                    </div>
-                </a>
-                <a href="https://sleet-brisket-9e2.notion.site/0403_lstm-_v02-81cff372f88a4be4ad762d46517bdedf?pvs=4">
-                    <div class="p1_lstm containerbox">
-                        <p>미세먼지 예측 연구</p>
-                            <video id="myVideo" src="./static/announce.mp4" autoplay loop muted/>
-                    </div>
-                </a>
-                
-                
-            </div>
-          </section>
-          <section>
-           </section>
-           <section>
-            <h2>KNOWLEDGE</h2>
-            Cpp, Html, Css, Jenkins , javascript, React, python, tensorflow , nginx , postgresql , mariadb , docker
-            
-           </section>
-           <section>
-            <h2>EXPERIENCE</h2>
-            <p>[ 2021.03.12 ] 컴퓨터활용능력 1급 취득 </p>
-            <p>[ 2022.01.15 ~ 2023.07.29 ] SKU 김성석 교수님 , DILAB 학부 연구생 활동 </p>
-            <p>[ 2023.09.05 ] 정보처리기사 취득 </p>
-            <p>[ 2022.09.19 ~ 2022.12.02 ] SKU C 언어 멘토링 멘토 활동</p>
-            <p>[ 2023.09.19 ~ 2023.12.02 ] SKU 초등 영재 교육 특강 파이썬반 강사 </p>
-            
-          </section>
-          <section>
-            <h2>EDUCATION</h2>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Spring, Java, JPA, JSP, Thymeleaf, MySQL, HTML, CSS, JavaScript, React, Python, TensorFlow, Docker, PostgreSQL, Nginx</p>
+    </section>
 
-            <p>[ 2018.03.01 ~ CURRENT ] 서경대학교 소프트웨어학과, 평균 학점 4.25 / 4.5, 성적 우수 장학금 5회 수령
-            <p>[ 2023.08.15 ~ 2023.12.27 ] SW 전문인재 양성 교육 AI/빅데이터 트랙 수강 </p>
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>컴퓨터활용능력 1급 취득 [2021.03.12]</p>
+        <p>SKU DILAB 학부 연구생 [2022.01.15 ~ 2023.07.29]</p>
+        <p>정보처리기사 취득 [2023.09.05]</p>
+        <p>SKU C 언어 멘토링 멘토 [2022.09.19 ~ 2022.12.02]</p>
+        <p>SKU 초등 영재 교육 특강 파이썬 강사 [2023.09.19 ~ 2023.12.02]</p>
+    </section>
 
-          </section>     
-          <section>
-            <h2>AWARDS</h2>
-            <p>[ 2022.01.26 ]&nbsp;&nbsp;제7회 서경대학교 프로그래밍대회 장려상</p>
-            <p>[ 2023.06.02 ] 2023년 한국정보기술학회 하계종합학술대회 우수상</p>
-          </section>
-        </article>
-        <article id="mainRight">
-          <section>
-           <h2>ABOUT</h2>
-           <!-- 자기 소개 -->
-           <p>안녕하세요, 생각한 아이디어를 코드로 짜는 것이 재미를 느끼는 개발자 지망생입니다.
-           현재 배포를 목적으로 웹으로 만드는 오목 프로젝트 진행 중입니다.
-            아래 연락처로 연락주시면 감사하겠습니다. </p>
-<p>📱 : 010-2021-3370 </p>
-           <p><a href="mailto:gksrbgks123@gmail.com"> gksrbgks123@gmail.com 메일 보내기</a></p>
-          </section>
-          
-          <section>
-            <!-- 경력 작성 -->
-          </section>
-        </article>
-      </main>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="https://github.com/gksrbgks2021/minigame/tree/main">자바 미니게임 구현</a></li>
+            <li><a href="https://github.com/gksrbgks2021/webPOS">편의점 POS 웹 앱</a></li>
+            <li><a href="https://sleet-brisket-9e2.notion.site/b0cfba0a3dc349038398427af9307e5f?pvs=4">레거시 코드 배포</a></li>
+            <li><a href="https://github.com/gksrbgks2021/phtoshop_code/blob/master/Readme.md">포토샵 기능 구현</a></li>
+            <li><a href="https://sleet-brisket-9e2.notion.site/0403_lstm-_v02-81cff372f88a4be4ad762d46517bdedf?pvs=4">미세먼지 예측 연구</a></li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>서경대학교 소프트웨어학과 [2018.03.01 ~ 2024.08.31]</p>
+        <p>성적 우수 장학금 5회 수령, 평균 학점 4.25/4.5</p>
+        <p>SW 전문인재 양성 교육 AI/빅데이터 트랙 수강 [2023.08.15 ~ 2023.12.27]</p>
+    </section>
+
+    <section id="awards">
+        <h2>Awards</h2>
+        <p>제7회 서경대학교 프로그래밍대회 장려상 [2022.01.26]</p>
+        <p>2023년 한국정보기술학회 하계종합학술대회 우수상 [2023.06.02]</p>
+    </section>
 </body>
 </html>
